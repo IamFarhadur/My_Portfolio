@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    box-sizing:border-box;
+    padding: 0;
+}
+:root {
+    --background-color : #0D1224;
+    --main-color : #16F2B3;
+    --text-color : #fff;
+    --icon-color : #EC4899;
+}
+
+body
+{
+    font-family: "Poppins", system-ui;
+    background: var(--background-color);
+    color: var(--text-color);
+    cursor: none;
+    position: relative;
+}
+
+header {
+    position: relative;
+}
+/* Header Area Style */
+
+#logo 
+{
+    font-family: "Poppins", system-ui;
+    font-size : 30px;
+    font-weight: 600;
+    margin: 5px;
+    color : #fff;
+}
+#dot
+{
+    color : var(--main-color);
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.nav_bar ul {
+    display: flex;
+}
+.nav_bar li {
+    list-style:none;
+}
+.nav_bar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+}
+.nav_bar a:hover {
+    color: var(--main-color)
+}
+
+/* Hello  */
+#hello {
+    color: var(--background-color);
+    padding : 5px 10px;
+    background: var(--main-color);
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#hello:hover {
+    transition: 1s;
+    color: var(--main-color);
+    background: var(--background-color);
+
+}
+
+/* Hero Section */
+.hero {
+    margin: 1px;
+    display: flex;
+    justify-items:flex-start;
+    justify-content: space-between;
+}
+#hero_text h1 {
+    line-height: 85px;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 10px;
+    margin-top: 100px;
+}
+#name {
+    color: var(--main-color);
+    font-size: 40px;
+}
+#input{
+    color: var(--icon-color);
+    font-size: 45px;
+}
+/* Social Area */
+.social {
+    margin: 5px;
+}
+.social a{
+    color: var(--icon-color);
+    text-decoration: none;
+    font-size: 30px;
+    justify-content: space-between;
+    display: inline-block;
+    margin-right: 8px
+}
+.social a:hover {
+    color: var(--main-color);
+    transition: 0.5s;
+    border-color: #EC4899;
+    transform: scale(1.2);
+}
+
+.hero img{
+    width: 35%;
+    height: auto;
+    margin: 50px 60px;
+    border-radius: 20px;
+    border: 5px solid #16F2B3;
+}
+
+
+#btn1 {
+    display: inline-block;
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px  solid var(--text-color);
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 17px;
+    margin: 0px 10px;
+}
+
+#btn1:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    transition: 2s;
+}
+
+
+
+   /* Cursor */
+
+   .cursor-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff; /* Dot color */
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    transition: transform 0.05s ease-out; /* Smooth movement */
+}
+
+/* Larger outline for the cursor */
+.cursor-outline {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff; /* Outline color */
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out, width 0.2s, height 0.2s;
+    z-index: 10000;
+}
+
+/* On hover over links and buttons, the outline expands */
+a:hover ~ .cursor-outline, button:hover ~ .cursor-outline {
+    width: 60px;
+    height: 60px;
+    border-color: #ffffff; /* Change outline color */
+}
+
+/* Change color of the dot when hovering */
+a:hover ~ .cursor-dot, button:hover ~ .cursor-dot {
+    background-color: #FFFFFF; /* Change dot color */
+}
