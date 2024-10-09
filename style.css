@@ -279,24 +279,23 @@ p {
     max-width: 600px;
     margin: 50px auto; /* Center the contact section */
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Light background */
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: var(--main-color);
-    text-align: center; /* Center the heading */
+    text-align: center; 
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Space between form elements */
+    gap: 15px; 
 }
 
 label {
-    font-size: 16px; /* Label size */
+    font-size: 16px; 
     color: var(--text-color);
 }
 
@@ -304,7 +303,7 @@ input, textarea {
     padding: 10px;
     border: 1px solid var(--main-color);
     border-radius: 5px;
-    background: transparent; /* Transparent background */
+    background: transparent;
     color: var(--text-color);
 }
 
@@ -319,49 +318,72 @@ button {
 }
 
 button:hover {
-    background-color: #14d8a0; /* Slightly darker on hover */
+    background-color: #14d8a0; 
 }
 
+/* General Footer Styles */
+footer {
+    background-color: rgba(13, 18, 36, 0.8); 
+    color: white; 
+    padding: 20px 5%; 
+    text-align: center; 
+}
 
-/* Footer Styles */
+/* Footer Container */
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: var(--background-color);
-    color: white;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
 .footer-container a {
     text-decoration: none;
     font-weight: 700;
-    color: var(--icon-color);
+    color:var(--icon-color);
+}
+/* Individual Sections */
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1; 
+    margin: 10px; 
+    min-width: 220px;
 }
 
-.footer-about, .footer-links, .footer-contact, .footer-social {
-    width: 23%;
-}
-
+/* Footer Links */
 .footer-links ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; 
+    padding: 0; 
+}
+
+.footer-links li {
+    margin: 10px 0;
 }
 
 .footer-links a {
-    text-decoration: none;
-    color: #fff;
+    text-decoration: none; 
+    color: white; 
+}
+
+/* Footer Social Icons */
+.footer-social {
+    display: flex; 
+    justify-content: center; 
 }
 
 .footer-social a {
-    margin-right: 10px;
-    color: #fff;
-    font-size: 20px;
+    margin: 0 10px; 
+    color: white;
+    text-decoration: none; 
+    font-size: 1.5em; 
 }
 
+/* Footer Bottom */
 .footer-bottom {
-    text-align: center;
-    padding: 10px 0;
-    background-color: rgba(13, 18, 36, 0.5);
+    margin-top: 20px; 
+    
 }
+
 
 /* Responsive Styles */
 
@@ -424,7 +446,7 @@ button:hover {
     }
 
     .nav_bar.active ul {
-        display: flex; /* Show the menu */
+        display: flex; 
     }
 
     
@@ -437,13 +459,25 @@ button:hover {
     }
 
     .footer-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; 
+        align-items: center; 
     }
-    
-    .footer-left, .footer-right {
-        flex: 1 1 100%;
-        text-align: center;
+
+    .footer-about,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        text-align: center; 
+        margin: 10px 0; 
+    }
+
+    .footer-social {
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+
+    .footer-social a {
+        margin: 5px;
     }
 }
 
@@ -474,9 +508,6 @@ button:hover {
         display: none;
     }
 }
-
-
-
 
 /* Custom Selection Style */
 ::selection {
