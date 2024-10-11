@@ -321,6 +321,10 @@ button:hover {
     background-color: #14d8a0; 
 }
 
+#name{
+    font-size: 15px;
+}
+
 /* General Footer Styles */
 footer {
     background-color: rgba(13, 18, 36, 0.8); 
