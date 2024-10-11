@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhadur Rahman | Web Developer</title>
-    <meta name="description" content="I am Farhadur Rahman, a passionate Front-End and Back-End Web Developer from Bangladesh, exploring full-stack development and various programming languages.">
-    <meta name="keywords" content="Farhadur Rahman, Web Developer, Front-End, Back-End, JavaScript, C Programming, Bangladesh, Portfolio">
-    <meta name="author" content="Farhadur Rahman">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Farhadur Rahman | Web Developer</title>
+        <meta name="description" content="I am Farhadur Rahman, a passionate Front-End and Back-End Web Developer from Bangladesh, exploring full-stack development and various programming languages.">
+        <meta name="keywords" content="Farhadur Rahman, Web Developer, Front-End, Back-End, JavaScript, C Programming, Bangladesh, Portfolio">
+        <meta name="author" content="Farhadur Rahman">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Farhadur Rahman | Web Developer">
+        <meta property="og:description" content="Explore my portfolio as a Front-End and Back-End Developer.">
+        <meta property="og:image" content="https://iamfarhadur.netlify.app/img/On.jpeg">
+        <meta property="og:url" content="https://iamfarhadur.netlify.app">
+        <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/custom.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon">
-
-    <link rel="canonical" href="https://yourwebsiteurl.com" />
-</head>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/custom.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon">
+        <link rel="canonical" href="https://iamfarhadur.netlify.app" />
+    
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Farhadur Rahman",
+                "jobTitle": "Web Developer",
+                "url": "https://iamfarhadur.netlify.app",
+                "sameAs": [
+                    "https://github.com/IamFarhadur",
+                    "https://www.linkedin.com/in/iamfarhadur/",
+                    "https://www.facebook.com/iamfarhadurdev",
+                    "https://x.com/iamfarhadur",
+                    "https://www.instagram.com/iamfarhadurdev/",
+                    "https://www.youtube.com/@iamfarhadur"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Bangladesh"
+                },
+                "image": "https://iamfarhadur.netlify.app/img/On.jpeg"
+            }
+        </script>
+    </head>
 <body>
     <header id="header_area">
         <div class="container">
@@ -27,15 +58,16 @@
             <div id="hamburger">&#9776;</div> 
             <nav class="nav_bar">
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skill</a></li>
-                    <li><a href="/html/contact.html"><span id="hello">Say hello <i class="ri-message-2-line"></i> </span></a></li>
+                    <li><a href="#contact"><span id="hello">Say hello <i class="ri-message-2-line"></i> </span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+<section id="hero"></section>
     <div class="container">
         <div class="hero">
             <div id="hero_text">
@@ -61,9 +93,9 @@
                         <i class="fa-brands fa-youtube"></i>
                     </a>
                 </div>
-                <button id="btn1">Contact</button>
+                <button id="btn1" href="" >Contact</button>
             </div>
-            <img src="/img/On.jpeg" alt="Profile Photo">
+            <img src="/img/On.jpeg" alt="Farhadur Rahman - Front End and Back End Web Developer">
         </div>
     </div>
 
@@ -72,13 +104,13 @@
     <script>
         var typed = new Typed('#input', {
             strings: ['Web Developer.', 'Student.'],
-            typeSpeed: 100,
-            backSpeed: 50,
+            typeSpeed: 200,
+            backSpeed: 100,
             loop: true,
         });
     </script>
 
-    <section id="about">
+    <section id="about" aria-label="About Me">
         <h2>About Me</h2>
         <p>
             I'm a passionate <span>Front-End and Back-End</span> Web Developer and <span>tech enthusiast</span> from <span>Bangladesh</span>. I'm currently diving into full-stack development and exploring various programming languages, including JavaScript and C. I enjoy solving problems and learning new technologies to build innovative projects.
@@ -95,7 +127,7 @@
         </p>
     </section>
 
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills-section" aria-label="My Skills" >
         <h2>My Skills</h2>
         <div class="skills-container">
             <div class="skill-card">
@@ -123,16 +155,16 @@
                 <i class="fa-solid fa-database"></i>
                 <h3>MongoDB</h3>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 0%;" data-skill="80%"></div>
+                    <div class="progress" style="width: 0%;" data-skill="50%"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" aria-label="Contact Me">
         <h2>Contact Me</h2>
         <p>If you have any questions, feel free to reach out!</p>
-        <form id="contact-form" action="#" method="POST">
+        <form id="contact-form" action="#" method="POST" netlify>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
@@ -152,36 +184,16 @@
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">Go to Home Page</a></li>
+                    <li><a href="#about">Learn More About Me</a></li>
+                    <li><a href="#skills">View My Skills</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
+            
             <div class="footer-contact">
                 <h3>Contact Me</h3>
-                <p>Email: <a href="mailto:farhadurrahman.help4@gmail.com">farhadurrahman.help4@gmail.com</a></p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Me</h3>
-                <a href="https://github.com/IamFarhadur" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/iamfarhadur/" target="_blank">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.facebook.com/iamfarhadurdev" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://x.com/iamfarhadur" target="_blank">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/iamfarhadurdev/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@iamfarhadur" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+                <p>Email: <a href="mailto:iamfarhadur@outlook.com">iamfarhadur@outlook.com</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -190,7 +202,6 @@
     </footer>
 
     <script>
-        // Progress Bar Animation
         document.querySelectorAll('.progress').forEach(progress => {
             progress.style.width = progress.getAttribute('data-skill');
         });

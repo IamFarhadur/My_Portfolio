@@ -41,3 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.getElementById('contact-form').onsubmit = function() {
+    alert('Thank you for your message! I will get back to you soon.');
+};
