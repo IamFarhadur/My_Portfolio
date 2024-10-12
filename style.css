@@ -324,6 +324,9 @@ button:hover {
 #fname{
     font-size: 15px;
 }
+#captchaF {
+    margin-left: 10px;
+}
 
 /* General Footer Styles */
 footer {
