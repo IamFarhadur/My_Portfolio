@@ -28,7 +28,7 @@ body {
 header {
     position: fixed;
     width: 100%;
-    background-color: rgba(13, 18, 36, 0.95);
+    background-color: rgba(13, 18, 36, 0.60);
     padding: 10px 20px;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
