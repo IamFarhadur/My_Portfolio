@@ -24,6 +24,10 @@ body {
     position: relative;
 }
 
+section{
+    margin: 0 10px;
+}
+
 /* Header Styles */
 header {
     position: fixed;
@@ -222,57 +226,140 @@ p {
 }
 
 /* Skill Section Style  */
-.skills-section {
-    padding: 50px 20px;
+.skills-slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide-track {
+    display: flex;
+    animation: slide 20s linear infinite; 
+  }
+  
+  .skill-card {
+    width: 150px;
+    padding: 20px;
+    margin: 10px;
     text-align: center;
-    background-color: var(--background-color);
+    background-color: #191e2f;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .skill-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .skill-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+  .skills-slider:hover .slide-track {
+    animation-play-state: paused; 
+  }
+
+/* Services Section Styles */
+#services {
+    padding: 80px 20px;
+    background-color: var(--background-color); 
+}
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--main-color);
+    position: relative;
+    display: inline-block;
+}
+
+#services h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: var(--main-color); 
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+#services p {
+    font-size: 1.1rem;
+    color: #ccc; 
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--icon-color);
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover i {
+    color: var(--main-color); 
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     color: var(--text-color);
 }
-#skills h2 {
-    font-size: 30px;
-    margin: 5px 5px;
-}
-.skills-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
-.skill-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease;
+.service-card p {
+    font-size: 1rem;
+    color: #ddd; 
+    line-height: 1.5;
 }
-
-.skill-card:hover {
-    transform: scale(1.05);
-}
-
-.skill-card i {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.progress-bar {
-    background-color: var(--icon-color);
-    border-radius: 5px;
-    height: 10px;
-    margin-top: 10px;
-    width: 100%;
-    overflow: hidden; 
-}
-
-.progress {
-    background-color: var(--main-color);
-    height: 100%;
-    border-radius: 5px;
-    transition: width 1s ease; 
-}
-
 
 /* About Us  */
 #contact {
@@ -432,13 +519,13 @@ footer {
     header {
         display: flex;
         justify-content: space-between;
-        align-items: center; /* Center vertically */
+        align-items: center; 
     }
     .nav_bar ul {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        display: none; /* Initially hidden */
+        display: none;
     }
 
     #hamburger {
@@ -512,13 +599,62 @@ footer {
     }
 }
 
-/* Custom Selection Style */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+button, .service-button, #btn1 {
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+button:hover, .service-button:hover, #btn1:hover {
+    transform: translateY(-3px);
+}
+
+
+button, .service-button, #btn1 {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.footer-links a:hover {
+    color: var(--main-color);
+    transition: color 0.3s ease;
+}
+
+
+.footer-social a:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+
+
+button:focus, .service-button:focus, #btn1:focus, a:focus {
+    outline: 2px dashed var(--main-color);
+    outline-offset: 4px;
+}
+
+
 ::selection {
     background-color: var(--main-color); 
     color: var(--background-color); 
 }
 
-/* For WebKit browsers (Chrome, Safari) */
+
 ::-moz-selection {
     background-color: var(--main-color); 
     color: var(--background-color); 
