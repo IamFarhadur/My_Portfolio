@@ -231,7 +231,7 @@ p {
     overflow: hidden;
   }
   
-  .slide-track {
+  .slide-track { 
     display: flex;
     animation: slide 20s linear infinite; 
   }
