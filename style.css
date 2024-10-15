@@ -229,56 +229,128 @@ p {
     color: var(--text-color); 
 }
 
-/* Skill Section Style  */
+/* Skills Section Styles */
+.skills-section {
+    padding: 80px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--main-color);
+    position: relative;
+}
+
+.skills-section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+/* Skills Slider Container */
 .skills-slider {
+    position: relative;
     width: 100%;
     overflow: hidden;
-  }
-  
-  .slide-track { 
+    cursor: grab;
+}
+
+.skills-slider.active {
+    cursor: grabbing;
+}
+
+/* Slide Track */
+.slide-track {
     display: flex;
-    animation: slide 20s linear infinite; 
-  }
-  
-  .skill-card {
+    width: calc(200%); /* Because of duplicated slides */
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Skill Card */
+.skill-card {
+    flex: 0 0 auto;
     width: 150px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
+    margin: 0 10px;
     background-color: #191e2f;
     border-radius: 10px;
-    flex-shrink: 0;
+    padding: 20px;
+    text-align: center;
     transition: transform 0.3s ease;
-  }
+}
 
-  .skill-card:hover {
+.skill-card:hover {
     transform: scale(1.1);
-  }
-  
-  .skill-logo {
+}
+
+.skill-logo {
     width: 80px;
     height: 80px;
-  }
-  
-  .skill-name {
+    object-fit: contain;
+}
+
+.skill-name {
     margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
+    color: var(--text-color);
+}
 
-  .skills-slider:hover .slide-track {
-    animation-play-state: paused; 
-  }
+/* Pause animation when dragging */
+.skills-slider.active .slide-track {
+    animation-play-state: paused;
+}
+
+/* Prevent text selection while dragging */
+.skills-slider.active {
+    user-select: none;
+}
+
+/* Smooth scroll behavior */
+.skills-slider {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skill-card {
+        width: 120px;
+        margin: 0 5px;
+    }
+
+    .skill-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        width: 100px;
+        margin: 0 5px;
+    }
+
+    .skill-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 
 /* Services Section Styles */
 #services {
@@ -423,64 +495,12 @@ footer {
     padding: 20px 5%; 
     text-align: center; 
 }
-
-/* Footer Container */
-.footer-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-}
-.footer-container a {
-    text-decoration: none;
-    font-weight: 700;
-    color:var(--icon-color);
-}
-/* Individual Sections */
-.footer-about,
-.footer-links,
-.footer-contact,
-.footer-social {
-    flex: 1; 
-    margin: 10px; 
-    min-width: 220px;
-}
-
-/* Footer Links */
-.footer-links ul {
-    list-style: none; 
-    padding: 0; 
-}
-
-.footer-links li {
-    margin: 10px 0;
-}
-
-.footer-links a {
-    text-decoration: none; 
-    color: white; 
-}
-
-/* Footer Social Icons */
-.footer-social {
-    display: flex; 
-    justify-content: center; 
-}
-
-.footer-social a {
-    margin: 0 5px; 
-    color: white;
-    text-decoration: none; 
-    font-size: 25px; 
-}
-
-/* Footer Bottom */
 .footer-bottom {
     margin-top: 20px; 
     
 }
 
-
-/* Responsive Styles */
+/* Responsive Style */
 
 /* Tablets and Medium Devices */
 @media (max-width: 992px) {
@@ -645,7 +665,7 @@ button, .service-button, #btn1 {
 }
 
 
-
+/* Extra Ordinary Style  */
 
 button:focus, .service-button:focus, #btn1:focus, a:focus {
     outline: 2px dashed var(--main-color);
@@ -662,4 +682,52 @@ button:focus, .service-button:focus, #btn1:focus, a:focus {
 ::-moz-selection {
     background-color: var(--main-color); 
     color: var(--background-color); 
+}
+
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it sits above all other elements */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.progress-container {
+    width: 80%;
+    max-width: 400px;
+    background-color: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: var(--main-color);
+    animation: loadProgress 3s forwards;
+}
+
+@keyframes loadProgress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+#loading p {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
 }

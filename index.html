@@ -45,10 +45,6 @@
         Best Web Development Services,
         Full Stack Web Development,
         Responsive Web Development,
-        
-        
-        
-    
         ">
         <meta name="author" content="Farhadur Rahman">
         
@@ -105,6 +101,14 @@
 <!-- Google Tag Manager -->
     </head>
 <body>
+
+    <!-- <div id="loading">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p>Loading...</p>
+    </div> -->
+
     <header id="header_area">
         <div class="container">
             <a href="https://iamfarhadur.netlify.app" style="text-decoration: none;"><div id="logo">IamFarhadur<span id="dot"><i class="fa-solid fa-circle"></i></span></div></a>
@@ -181,10 +185,11 @@
         </p>
     </section>
 
-    <section id="skills" class="skills-section" aria-label="My Skills" >
+    <section id="skills" class="skills-section" aria-label="My Skills">
         <h2>My Skills</h2>
         <div class="skills-slider">
             <div class="slide-track">
+                <!-- Original Skill Cards -->
                 <div class="skill-card">
                     <img src="img/Logo/html.png" alt="HTML Logo" class="skill-logo">
                     <p class="skill-name">HTML</p>
@@ -218,10 +223,10 @@
                     <p class="skill-name">Git/Github</p>
                 </div>
                 <div class="skill-card">
-                    <img src="img/Logo/Sass.png" alt="Git Logo" class="skill-logo">
+                    <img src="img/Logo/Sass.png" alt="Sass Logo" class="skill-logo">
                     <p class="skill-name">Sass</p>
                 </div>
-                <!-- Duplicate cards-->
+                <!-- Duplicate Skill Cards for Infinite Scroll -->
                 <div class="skill-card">
                     <img src="img/Logo/html.png" alt="HTML Logo" class="skill-logo">
                     <p class="skill-name">HTML</p>
@@ -255,7 +260,7 @@
                     <p class="skill-name">Git/Github</p>
                 </div>
                 <div class="skill-card">
-                    <img src="img/Logo/Sass.png" alt="Git Logo" class="skill-logo">
+                    <img src="img/Logo/Sass.png" alt="Sass Logo" class="skill-logo">
                     <p class="skill-name">Sass</p>
                 </div>
             </div>
@@ -292,7 +297,7 @@
         </div>
     </section>
     
-    <section id="contact" aria-label="Contact Me">
+<section id="contact" aria-label="Contact Me">
         <h2>Contact Me</h2>
         <p>If you have any questions, feel free to reach out!</p>
         <form id="contact-form" action="#" method="POST" netlify data-netlify-recaptcha="true">
@@ -305,29 +310,9 @@
             <button type="submit">Send Message</button>
             <div data-netlify-recaptcha="true"></div>
         </form>
-    </section>
+</section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3>About Me</h3>
-                <p>I'm Farhadur Rahman, a passionate web developer dedicated to creating innovative solutions and exploring new technologies.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Go to Home Page</a></li>
-                    <li><a href="#about">Learn More About Me</a></li>
-                    <li><a href="#skills">View My Skills</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact">
-                <h3>Contact Me</h3>
-                <p>Email: <a href="mailto:iamfarhadur@outlook.com">iamfarhadur@outlook.com</a></p>
-            </div>
-        </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Farhadur Rahman. All rights reserved.</p>
         </div>
@@ -372,6 +357,7 @@
 });
 
     </script>
-    <script src="/js/script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
