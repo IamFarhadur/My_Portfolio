@@ -1,0 +1,51 @@
+// Colors 
+
+$mColor: #16F2B3;
+$sColor: #EC4899;
+$bgColor: #0D1224;
+$tColor: #fff;
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+span {
+    font-weight: 700;
+}
+body {
+    font-family: "Poppins", system-ui;
+    background: $bgColor;
+    color: $tColor;
+    position: relative;
+}
+section{
+    margin: 0 10px;
+}
+html {
+    scroll-behavior: smooth;
+}
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    // background-color: var(--background-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+// #backToTop:hover {
+//     background-color: var(--main-color);
+// }
+::selection {
+    background-color: $mColor; 
+    color: $bgColor; 
+}

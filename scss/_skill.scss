@@ -1,0 +1,119 @@
+.skills-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: $mColor;
+    position: relative;
+}
+
+.skills-section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: $mColor;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+/* Skills Slider Container */
+.skills-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.skills-slider.active {
+    cursor: grabbing;
+}
+
+/* Slide Track */
+.slide-track {
+    display: flex;
+    width: calc(200%); 
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Skill Card */
+.skill-card {
+    flex: 0 0 auto;
+    width: 150px;
+    margin: 0 10px;
+    background-color: #191e2f;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+.skill-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.skill-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $tColor;
+}
+
+/* Pause animation when dragging */
+.skills-slider.active .slide-track {
+    animation-play-state: paused;
+}
+
+/* Prevent text selection while dragging */
+.skills-slider.active {
+    user-select: none;
+}
+
+/* Smooth scroll behavior */
+.skills-slider {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skill-card {
+        width: 120px;
+        margin: 0 5px;
+    }
+
+    .skill-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        width: 100px;
+        margin: 0 5px;
+    }
+
+    .skill-logo {
+        width: 50px;
+        height: 50px;
+    }
+}

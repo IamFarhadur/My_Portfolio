@@ -1,0 +1,26 @@
+#about {
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+h2 {
+    font-size: 28px; 
+    color: $mColor; 
+    margin-bottom: 20px; 
+}
+
+h3 {
+    font-size: 22px; 
+    color: $mColor; 
+    margin-top: 20px; 
+}
+
+p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: $tColor; 
+}

@@ -1,0 +1,83 @@
+#services {
+    padding: 80px 20px;
+    background-color: $bgColor; 
+}
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: $mColor;
+    position: relative;
+    display: inline-block;
+}
+
+#services h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: $mColor; 
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+#services p {
+    font-size: 1.1rem;
+    color: #ccc; 
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: $sColor;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover i {
+    color: $mColor; 
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: $tColor;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #ddd; 
+    line-height: 1.5;
+}

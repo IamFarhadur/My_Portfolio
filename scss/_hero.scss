@@ -1,0 +1,91 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 20px 50px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hero_text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#hero_text h1 {
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#name {
+    color: $mColor;
+    font-size: 40px;
+}
+
+#input {
+    color: $sColor;
+    font-size: 45px;
+}
+
+/* Social Area */
+.social {
+    margin: 5px;
+}
+.social a{
+    color: $sColor;
+    text-decoration: none;
+    font-size: 30px;
+    justify-content: space-between;
+    display: inline-block;
+    margin-right: 8px
+}
+.social a:hover {
+    color: $mColor;
+    transition: 0.5s;
+    border-color: #EC4899;
+    transform: scale(1.2);
+}
+
+.hero img{
+    width: 35%;
+    height: auto;
+    margin: 50px 60px;
+    border-radius: 20px;
+    border: 5px solid #16F2B3;
+}
+
+
+#btn1 {
+    display: inline-block;
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px  solid $tColor;
+    color: $tColor;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 17px;
+    margin: 0px 10px;
+}
+
+#btn1:hover{
+    background-color: $mColor;
+    color: $tColor;
+    transition: 2s;
+}
+
+
+.hero img {
+    width: 35%;
+    height: auto;
+    margin: 50px 60px;
+    border-radius: 20px;
+    border: 5px solid $mColor;
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
+}
+

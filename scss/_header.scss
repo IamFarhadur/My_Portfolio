@@ -1,0 +1,92 @@
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(13, 18, 36, 0.60);
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+#logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: $tColor;
+    transition: color 0.3s ease; 
+}
+
+#dot {
+    font-size: 10px;
+    margin: 2px;
+    color: $mColor;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav_bar {
+    ul {
+        display: flex;
+        gap: 20px;
+        &:active {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $tColor;
+        font-size: 20px;
+        display: inline-block;
+        position: relative;
+        font-weight: 700;
+        transition: color 0.3s ease; 
+    }
+}
+
+#hello {
+    padding: 5px 5px;
+    background-color: $mColor;
+    color: $bgColor;
+    border-radius: 10px;
+    transition: background-color 0.4s ease, color 0.4s ease; 
+    &:hover {
+        color: $mColor;
+        background-color: $bgColor;
+        transition: 1s;  
+    }
+}
+
+#hamburger {
+    display: none;
+}
+
+.nav_bar a:hover {
+    color: $mColor;
+    transition: color 0.3s ease;  
+}
+
+
+header.scrolled {
+    background-color: rgba(13, 18, 36, 0.95);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+}
+
+
+#backToTop {
+    opacity: 0;  
+    transition: opacity 0.5s ease-in-out; 
+}
+
+#backToTop.show {
+    opacity: 1; 
+}
