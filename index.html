@@ -5,27 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Farhadur Rahman | Professional Web Developer</title>
         <meta name="description" content="Explore the portfolio of Farhadur Rahman, a young and ambitious web developer from Bangladesh. Here, you'll find a collection of my projects and front-end and back-end development skills, showcasing my commitment to innovation and excellence.">
-        <meta name="keywords" content=
-        "
-        Farhadur Rahman,
-        IamFarhadur,
-        Web Developer,
-        Front-End Web Developer,
-        Back-End Web Developer,
-        Full-Stack Web Developer,
-        responsive web development,
-        Custom Web Development,
-        Mern Stack Developer,
-        Proffesional Web Developer,
-        professional web development service,
-        services for web development,
-        personal website,
-        Web Developer Portfolio,
-        Portfolio Website,
-
-        ">
-        <meta name="author" content="Farhadur Rahman">
-        
         <!-- Open Graph Meta Tags -->
         <meta property="og:title" content="Farhadur Rahman | Professional Web Developer">
         <meta property="og:description" content="Explore the portfolio of Farhadur Rahman, a young and ambitious web developer from Bangladesh.">
@@ -34,28 +13,34 @@
         <meta name="twitter:card" content="https://iamfarhadur.netlify.app/img/favicon.png">
     
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="./css/custom.min.css">
+        <link rel="stylesheet" href="./css/style.min.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+        <!-- Google Font  -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" as="style">
+        <!-- Font Awosome  -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <!-- Favicon  -->
         <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon">
-
+        <!-- SEO -->
         <link rel="canonical" href="https://www.farhadurrahman.xyz" />
-    
+        <link rel="preload" href="./img/logo.jpeg" as="image">
+        <meta name="keywords" content="Farhadur Rahman, Web Developer, Front-End Developer, Back-End Developer, MERN Stack, Portfolio">
+        <meta name="author" content="Farhadur Rahman">
         <!-- Structured Data -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "Person",
+                "@type": "WebSite",
                 "name": "Farhadur Rahman",
                 "jobTitle": "Web Developer",
                 "url": "https://www.farhadurrahman.xyz",
+
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://www.farhadurrahman.xyz/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
                 "sameAs": [
                     "https://github.com/IamFarhadur",
                     "https://www.linkedin.com/in/iamfarhadur/",
@@ -123,7 +108,8 @@
                 </div>
                 <button id="btn1" href="" >Contact</button>
             </div>
-            <img src="./img/logo.jpeg" alt="Farhadur Rahman - Front End and Back End Web Developer" loading="lazy">
+            <img src="./img/logo.jpeg" srcset="./img/logo-small.jpeg 480w, ./img/logo.jpeg 1024w" alt="Farhadur Rahman - Front End and Back End Web Developer" loading="lazy">
+
         </div>
     </div>
 
@@ -289,7 +275,9 @@
     </footer>
 
 
-<button id="backToTop" title="Go to top">↑</button>
+<button id="backToTop" title="Go to top">
+    <img src="img/TOP.svg" alt="Top logo">
+</button>
 
 <!-- JS -->
 <script>

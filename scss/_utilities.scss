@@ -5,6 +5,9 @@ $sColor: #EC4899;
 $bgColor: #0D1224;
 $tColor: #fff;
 
+// Font 
+$mFont : "Poppins", system-ui;
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -18,10 +21,11 @@ span {
     font-weight: 700;
 }
 body {
-    font-family: "Poppins", system-ui;
+    font-family: $mFont ;
     background: $bgColor;
     color: $tColor;
     position: relative;
+    text-align: center;
 }
 section{
     margin: 0 10px;
@@ -34,18 +38,16 @@ html {
     bottom: 40px;
     right: 40px;
     display: none;
-    // background-color: var(--background-color);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
+    padding: 5px ;
+    background-color: $sColor;
+    &:hover{
+        background-color: $mColor;
+        color: $bgColor;
+    }
 }
-// #backToTop:hover {
-//     background-color: var(--main-color);
-// }
+
 ::selection {
     background-color: $mColor; 
     color: $bgColor; 
 }
+

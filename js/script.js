@@ -1,5 +1,1 @@
-const hamburger=document.getElementById("hamburger");const navBar=document.querySelector(".nav_bar");hamburger.addEventListener("click",()=>{navBar.classList.toggle("active")});const slider=document.querySelector(".skills-slider");const slideTrack=document.querySelector(".slide-track");let isDown=false;let startX;let scrollLeftPos;let autoScrollInterval;const autoScrollSpeed=1;const scrollIntervalTime=20;function startAutoScroll(){autoScrollInterval=setInterval(()=>{slideTrack.scrollLeft+=autoScrollSpeed;if(slideTrack.scrollLeft>=slideTrack.scrollWidth/2){slideTrack.scrollLeft=0}},scrollIntervalTime)}function stopAutoScroll(){clearInterval(autoScrollInterval)}startAutoScroll();const backToTopButton=document.getElementById("backToTop");window.onscroll=function(){scrollFunction()};function scrollFunction(){if(document.body.scrollTop>300||document.documentElement.scrollTop>300){backToTopButton.style.display="block"}else{backToTopButton.style.display="none"}}backToTopButton.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
-
-
-// ---------------------------------------- // 
-// Form 
+const hamburger=document.getElementById("hamburger");const navBar=document.querySelector(".nav_bar");hamburger.addEventListener("click",()=>{navBar.classList.toggle("active")});
