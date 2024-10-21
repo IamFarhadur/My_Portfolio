@@ -1,19 +1,4 @@
 @media (max-width: 992px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav_bar ul.active {
-        display: flex;
-    }
-    .nav_bar {
-        width: 100%;
-        display: inline-block;
-    }
-    .nav_bar ul {
-        justify-content: space-between;
-    }
     .hero {
         flex-direction: column;
         text-align: center;
@@ -29,33 +14,6 @@
 }
 /* Mobile Devices */
 @media (max-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
-    }
-    .nav_bar ul {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        display: none;
-    }
-    #hamburger {
-        display: block; 
-        cursor: pointer;
-        font-size: 30px;
-        color: $tColor;
-    }
-    .nav_bar.active ul {
-        display: flex; 
-    }
-    
-    #logo {
-        flex: 1; 
-    }
-    #hamburge {
-        margin-left: auto; 
-    }
     .footer-container {
         flex-direction: column; 
         align-items: center; 

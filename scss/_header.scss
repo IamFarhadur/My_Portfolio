@@ -1,24 +1,13 @@
-header {
+#site_header {
     position: fixed;
     width: 100%;
     background-color: rgba(13, 18, 36, 0.60);
     padding: 10px 20px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#logo {
-    font-size: 30px;
-    font-weight: 600;
-    color: $tColor;
-}
-#dot {
-    font-size: 10px;
-    margin: 2px;
-    color:$mColor;
-
-}
-.container {
+.header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,47 +15,107 @@ header {
     margin: 0 auto;
 }
 
-.nav_bar ul {
+.site_logo {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo_text{
+    font-size: 30px;
+    font-weight: 600;
+    color: $tColor;
+}
+
+.dot_icon {
+    font-size: 10px;
+    margin-left: 5px;
+    color: $mColor;
+}
+
+.right_section {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu_toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: $tColor;
+    margin-left: 20px;
+}
+
+.main_navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav_links {
     display: flex;
     gap: 20px;
 }
 
-.nav_bar ul.active {
-    display: flex; 
-    flex-direction: column; 
-    width: 100%; 
-}
-
-.nav_bar li {
+.nav_links li {
     list-style: none;
 }
 
-.nav_bar a {
+.nav_links a {
     text-decoration: none;
     color: $tColor;
     font-size: 20px;
-    display: inline-block;
-    position: relative;
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
-#hello {
-    padding: 5px 5px;
+.hello_message {
+    padding: 5px 10px;
     background-color: $mColor;
     color: $bgColor;
     border-radius: 10px;
 }
-#hello:hover {
-    color:$mColor;
+
+.hello_message:hover {
+    color: $mColor;
     background-color: $bgColor;
     transition: 1s;
 }
 
-#hamburger {
-    display: none;
+@media (max-width: 768px) {
+    .nav_links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .main_navigation.active .nav_links {
+        display: flex;
+    }
+
+    .menu_toggle {
+        display: inline-block;
+    }
+
+    .right_section {
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
 
-.nav_bar a:hover {
+.nav_links a:hover {
     color: $mColor;
+}
+
+.main_navigation.active .nav_links {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
 }
