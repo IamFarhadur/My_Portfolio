@@ -76,12 +76,12 @@
     background-color: $mColor;
     color: $bgColor;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .hello_message:hover {
     color: $mColor;
     background-color: $bgColor;
-    transition: 1s;
 }
 
 @media (max-width: 768px) {
