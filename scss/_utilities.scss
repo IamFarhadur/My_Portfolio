@@ -1,3 +1,10 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
 // Colors 
 
 $mColor: #16F2B3;
@@ -36,6 +43,9 @@ html {
 #backToTop {
     position: fixed;
     bottom: 40px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
     right: 40px;
     display: none;
     padding: 5px ;
