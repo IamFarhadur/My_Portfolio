@@ -21,13 +21,6 @@
       <priority>0.8</priority>
    </url>
 
-   <!-- Gallery -->
-   <url>
-      <loc>https://farhadurrahman.xyz/gallery</loc>
-      <lastmod>2024-10-19</lastmod>
-      <priority>0.6</priority>
-   </url>
-
    <!-- Contact Me -->
    <url>
       <loc>https://farhadurrahman.xyz/contact</loc>
