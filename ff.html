@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My FF UID</title>
+    <script>
+        async function copyAndClose() {
+            try {
+                const number = "8882022665";
+                await navigator.clipboard.writeText(number);
+                alert("Number copied: " + number);
+                window.close();
+            } catch (error) {
+                alert("Failed to copy the number.");
+                console.error("Copy error:", error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Button for user to trigger copy and close -->
+    <button onclick="copyAndClose()"
+    style="padding: 10px 10px; 
+    background-color: cadetblue;
+    color:black;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;"
+    >Click here to copy UID</button>
+</body>
+</html>
