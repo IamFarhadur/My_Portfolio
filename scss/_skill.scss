@@ -42,7 +42,10 @@
     margin: 0 8px;
     background-color: #191e2f;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     transition: transform 0.3s ease;
 }

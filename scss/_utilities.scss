@@ -40,19 +40,46 @@ section{
 html {
     scroll-behavior: smooth;
 }
+// Back to Top Button Style 
 #backToTop {
     position: fixed;
     bottom: 40px;
-    border-radius: 10px;
-    border:none;
-    cursor: pointer;
     right: 40px;
-    display: none;
-    padding: 5px ;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
     background-color: $sColor;
-    &:hover{
-        background-color: $mColor;
+    display: none;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#backToTop::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, white, transparent);
+    transition: 1s;
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        top: 100%;
+        left: -100%;
     }
+    100% {
+        top: -100%;
+        left: 100%;
+    }
+}
+
+#backToTop:hover {
+    background-color: $mColor;
 }
 
 ::selection {

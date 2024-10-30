@@ -22,3 +22,15 @@ function scrollFunction() {
 document.getElementById("backToTop").addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Hello Message JS Code 
+const helloMessage = document.querySelector('.hello_message');
+
+helloMessage.addEventListener('mousemove', (e) => {
+    const rect = helloMessage.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    helloMessage.style.setProperty('--x', `${x}px`);
+    helloMessage.style.setProperty('--y', `${y}px`);
+});
+
